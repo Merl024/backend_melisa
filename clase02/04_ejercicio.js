@@ -1,42 +1,37 @@
 // ejercicio de practica. 
 //Realizar una lista nueva, que contenga todos los tipos de productos
 
-const objetos = [{
+const frutas = [{
     manzanas: 3,
     peras: 2,
     carnes: 1,
     jugos: 5,
     dulces: 7}, 
     {
-    manzanas: 3,
-    sandias: 2,
-    huevos: 1,
-    jugos: 5,
+    manzanas: 1,
+    sandias: 7,
+    huevos: 9,
+    jugos: 10,
     panes: 4
 }]
 
 let newArray = []
 let totalContProductos = 0
 
-objetos.forEach(objeto => {
-    const keys = Object.keys(objeto)
-    // console.log(keys)
+frutas.forEach(fruta => {
+    const keys = Object.keys(fruta)
+    console.log(keys)
 
+    /* Si el key no existe en newArray, lo agregara con el includes. Si ya existe no lo pondra
+    De nuevo*/
     keys.forEach(key => {
         if(!newArray.includes(key)) newArray.push(key)
     })
 
-    let soloVal = Object.values(objeto)
+    let soloVal = Object.values(fruta)
     let totalProductos = soloVal.reduce((sum, val) => sum + val)
     totalContProductos += totalProductos
 })
 
-// console.log(newArray)
-// console.log(totalContProductos)
-
-
-/***************************************/
-/*********** HANDS ON LAB **************/
-/***************************************/
-
-
+console.log(newArray)
+console.log(totalContProductos)

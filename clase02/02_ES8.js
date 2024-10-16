@@ -31,10 +31,12 @@ const user ={
     edad: 18
 }
 
-// user.apellido = 'Rivas'
+// user.apellido = 'Rivas' // Esto no se encuentra dentro del objeto
 
 console.log(user.nombre)
 console.log(user.apellido) //este tipo de undefined es lo que rompe el frontend
 
+// el ?? es el operador nullish, el cual retornada el valor del lado derecho cuando 
+// el valor del lado izquierdo sea null o undefined
 const apellido = user.apellido ?? 'No especificado'
 console.log(apellido)

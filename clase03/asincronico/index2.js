@@ -38,5 +38,5 @@ async function deleteArchivo() {
 
 escribirArchivo()
 // updateArchivo()
-deleteArchivo()
+// deleteArchivo()
 

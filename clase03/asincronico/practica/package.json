@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "ejercicio",
   "version": "1.0.0",
   "description": "Es un ejercicio practico. En donde se pondra a prueba el uso de FS con promisas, usando callbacks y func asincronicas",
