@@ -1,0 +1,15 @@
+{
+  "name": "06_promises",
+  "version": "1.0.0",
+  "main": "06_filePromises.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Melisa Rivas",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}

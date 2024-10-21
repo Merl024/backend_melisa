@@ -1,0 +1,16 @@
+{
+  "contenidoStr": "{\n  \"name\": \"07_ejemplo\",\n  \"version\": \"1.0.0\",\n  \"main\": \"07_ejemploPromise.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"Melisa Rivas\",\n  \"license\": \"ISC\",\n  \"description\": \"\"\n}\n",
+  "contenidoObj": {
+    "name": "07_ejemplo",
+    "version": "1.0.0",
+    "main": "07_ejemploPromise.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Melisa Rivas",
+    "license": "ISC",
+    "description": ""
+  },
+  "size": 0
+}

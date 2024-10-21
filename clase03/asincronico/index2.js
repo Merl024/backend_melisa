@@ -1,4 +1,5 @@
-// FS con callbacks y promesas
+// FS con callbacks y promesas. 
+/**Se pone promises al final porque en el codigo se ocupa un await y try-catch*/
 const fs = require('fs').promises
 
 //Haciendo archivos con node por medio de las promesas asincronas 
