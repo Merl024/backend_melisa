@@ -22,14 +22,15 @@ app.set('view engine', 'handlebars')
 app.use(express.static(__dirname + '/views'))
 
 
-app.get('/', (req, res) => {
-    let testUser = {
-        name: 'Melisa',
-        lastName: "Rivas"
-    }
+app.get('/saludo/:nombre', (req, res) => {
+    const nombre = req.params.nombre
 
-    res.render('index', testUser)
+    // HB buscara dentro de layouts, por defecto, busca al que se llama main. Poniendole false, decimeos que valide todoa lo que tenga adentro
+    res.render('layouts/saludo', {nombre, layout:false})
 })
+
+
+
 
 app.listen(PORT, () => {
     console.log('Se esta escuchando en el puerto', PORT);
