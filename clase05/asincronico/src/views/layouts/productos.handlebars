@@ -1,0 +1,13 @@
+{{!-- El each recorrera por cada dato de la lista, y el if cumplira una condicion si es que existe
+de lo contrario puede mostrar otra cosa o no mostrar nada. 
+Estas tiene una etiqueta de apertura y cierre al igual del as de html --}}
+<div>
+    {{#each productos}} <ul> {{nombre}} 
+        <li> {{precio}} </li>
+    {{#if oferta}} 
+        <li> Este producto esta en oferta</li>
+        {{else}} <li>Este producto no esta en ofera </li>
+    {{/if}}
+    </ul> {{/each}}
+
+</div>

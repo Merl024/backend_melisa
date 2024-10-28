@@ -7,6 +7,25 @@ const PORT = 8080
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+//Se utilizara para el ejericio practico
+//Parte del ejercicio practio con condicionales {{#if}} y {{#each}}
+const productos  = [
+    {
+        nombre: "USB",
+        precio: 0.5,
+        oferta: true
+    },
+    {
+        nombre: "Computadora",
+        precio: 780,
+        oferta: true
+    },
+    {
+        nombre: "Audifonos",
+        precio: 50,
+        oferta: false
+    }
+]
 
 // Configurar para indicar a express que se usaran handlebars
 app.engine('handlebars', handlebars.engine())
@@ -29,6 +48,11 @@ app.get('/saludo/:nombre', (req, res) => {
     res.render('layouts/saludo', {nombre, layout:false})
 })
 
+
+//Parte del ejercicio practio con condicionales {{#if}} y {{#each}}
+app.get('/productos', (req, res) => {
+    res.render('layouts/productos', {productos, layout: false})
+})
 
 
 
