@@ -1,1 +1,9 @@
+# Node Modules
 node_modules/
+
+# Handlebars files
+src/views/layouts/main.handlebars
+src/views/layouts/productos.handlebars
+src/views/layouts/saludo.handlebars
+src/views/index.handlebars
+src/views/saludo.handlebars

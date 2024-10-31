@@ -1,5 +1,6 @@
 const express = require('express')
 const handlebars = require('express-handlebars')
+const vistasRouter = require('./routes/vistas.js')
 
 const app = express()
 const PORT = 8080
@@ -54,7 +55,8 @@ app.get('/productos', (req, res) => {
     res.render('layouts/productos', {productos, layout: false})
 })
 
-
+//Usando routers
+app.use('/vistas', vistasRouter)
 
 app.listen(PORT, () => {
     console.log('Se esta escuchando en el puerto', PORT);
