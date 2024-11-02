@@ -1,9 +1,3 @@
-# Node Modules
-node_modules/
+#Los handlebars que se han ignorado es para poder trabajar con multer
 
-# Handlebars files
-src/views/layouts/main.handlebars
-src/views/layouts/productos.handlebars
-src/views/layouts/saludo.handlebars
-src/views/index.handlebars
-src/views/saludo.handlebars
+node_modules/

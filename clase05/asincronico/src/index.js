@@ -1,12 +1,34 @@
 const express = require('express')
 const handlebars = require('express-handlebars')
 const vistasRouter = require('./routes/vistas.js')
+//Este ayuda a poder subir archivos
+const multer = require('multer')
+const path = require('path')
 
 const app = express()
 const PORT = 8080
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+//Config de multer
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        //configurando la carpeta donde se guardaran los archivos subidos
+        cb(null, path.resolve(__dirname, './uploads'))
+        //cb quiere decir callback
+    },
+    filename: (req, file, cb) => {
+        const timestamp = Date.now()
+        const originalname = file.originalname
+        const ext = path.extname(originalname)
+        cb(null, `${timestamp} - ${originalname}`)
+    }
+})
+
+//middleware para manejar la subida de los archivos
+const upload = multer({ storage })
+app.use(express.static(path.join(__dirname, 'public')))
 
 //Se utilizara para el ejericio practico
 //Parte del ejercicio practio con condicionales {{#if}} y {{#each}}
@@ -57,6 +79,12 @@ app.get('/productos', (req, res) => {
 
 //Usando routers
 app.use('/vistas', vistasRouter)
+
+//Es para que express entienda donde esta buscando los archivos
+app.post('/upload', upload.single('archivo'), (req, res) => {
+    res.send('El archivo se ha subido correctamente')
+})
+
 
 app.listen(PORT, () => {
     console.log('Se esta escuchando en el puerto', PORT);
